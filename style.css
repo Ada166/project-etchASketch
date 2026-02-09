@@ -2,7 +2,7 @@
     border: 1px solid black;
     width: calc(100% / 16);
     height: 50px;
-    background-color:bisque;
+    background-color: white;
     box-sizing: border-box;
     padding-bottom: calc(100% / 16);
 }

@@ -13,7 +13,6 @@ const resetBtn = document.getElementById('resetBtn');
     });
 
     
-
 const container = document.querySelector('.container');
 function createGrid(numSquare) {
     let squaresPerSide = Math.sqrt(numSquare);
@@ -25,11 +24,14 @@ function createGrid(numSquare) {
         square.classList.add('square');
         container.appendChild(square);
         square.addEventListener('mouseover', () => {
-    square.style.backgroundColor = 'orange';
+    square.style.backgroundColor = 'green';
+    let currentOpacity = parseFloat(square.style.opacity) || 0;
+    if (currentOpacity < 1) {
+        square.style.opacity = currentOpacity + 0.4;
+    }
 })
     }
 }
-
 
 
 createGrid(256);
